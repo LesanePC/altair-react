@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from './Intro.module.css';
+import introBg from '/src/assets/img/Back_fon.png';
 
 export const Intro = () => {
   return (
-    <section className={styles.intro}>
+    <section className={styles.intro} style={{ backgroundImage: `url(${introBg})` }}>
       <div className="container text-center">
         <div className={styles.introInner}>
           <h1 className={styles.introTitle}>

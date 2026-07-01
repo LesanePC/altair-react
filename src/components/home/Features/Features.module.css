@@ -46,10 +46,12 @@
   margin-bottom: 20px;
 }
 
-.featuresIcon {
-  font-size: 48px;
+.featuresIconSvg {
+  width: 48px;
+  height: 48px;
+  color: #31344e;
   display: block;
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
 }
 
 .featuresNumber {
