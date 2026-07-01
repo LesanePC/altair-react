@@ -8,7 +8,6 @@ export interface ObjectItem {
   floor?: number;
   description: string;
   image: string;
-  isFavorite?: boolean;
 }
 
 export interface ServiceItem {
@@ -23,8 +22,12 @@ export interface TeamMember {
   id: string;
   name: string;
   position: string;
+  experience: string;
   photo: string;
-  description?: string;
+  phone: string;
+  email: string;
+  credentials: string;
+  credentialsDate: string;
 }
 
 export interface Review {
@@ -34,4 +37,12 @@ export interface Review {
   rating: number;
   date: string;
   photo?: string;
+}
+
+export interface WorkCategory {
+  id: string;
+  title: string;
+  image: string;
+  link: string;
+  items: string[];
 }

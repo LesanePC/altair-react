@@ -1,0 +1,55 @@
+.intro {
+  background: linear-gradient(135deg, #31344e 0%, #1a1a2e 100%);
+  color: #fff;
+  padding: 80px 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.introInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introTitle {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.introSubtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.introButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 50px 0;
+    min-height: auto;
+  }
+
+  .introTitle {
+    font-size: 28px;
+  }
+
+  .introSubtitle {
+    font-size: 16px;
+  }
+
+  .introButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

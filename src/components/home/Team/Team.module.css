@@ -1,0 +1,104 @@
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.teamItem {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.teamItem:hover {
+  transform: translateY(-5px);
+}
+
+.teamPhotoWrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 75%;
+}
+
+.teamPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamInfo {
+  padding: 20px;
+}
+
+.teamName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.teamProf {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.teamExperience {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.teamCredentials {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+.teamCredentials p {
+  margin: 2px 0;
+}
+
+.teamContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teamPhone,
+.teamEmail {
+  color: #31344e;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.teamPhone:hover,
+.teamEmail:hover {
+  color: #1a73e8;
+}
+
+.teamCta {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+}
