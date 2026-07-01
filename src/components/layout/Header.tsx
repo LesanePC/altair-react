@@ -1,13 +1,25 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from '/src/assets/img/Logotype.webp';
+import logo from '../../assets/img/Logotype.webp';
 
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className="container">
         <div className={styles.headerInner}>
-          <Link to="/" className={styles.headerLogo}>
+          {/* Логотип */}
+          <Link to="/" className={styles.headerLogo} aria-label="На главную">
             <img src={logo} alt="ООО Альтаир Недвижимость" className={styles.logoImage} />
             <div className={styles.logoText}>
               <strong>ООО АЛЬТАИР</strong>
@@ -15,23 +27,68 @@ export const Header = () => {
             </div>
           </Link>
 
-          <nav className={styles.nav}>
-            <Link to="/" className={styles.navLink}>
+          {/* Навигация */}
+          <nav className={styles.nav} id="nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+              }
+              onClick={closeMenu}
+              end
+            >
               главная
-            </Link>
-            <Link to="/objects" className={styles.navLink}>
+            </NavLink>
+            <NavLink
+              to="/objects"
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+              }
+              onClick={closeMenu}
+            >
               объекты
-            </Link>
-            <Link to="/services" className={styles.navLink}>
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+              }
+              onClick={closeMenu}
+            >
               услуги
-            </Link>
-            <Link to="/about" className={styles.navLink}>
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+              }
+              onClick={closeMenu}
+            >
               о нас
-            </Link>
-            <Link to="/contacts" className={styles.navLink}>
+            </NavLink>
+            <NavLink
+              to="/contacts"
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+              }
+              onClick={closeMenu}
+            >
               контакты
-            </Link>
+            </NavLink>
           </nav>
+
+          {/* Бургер-меню */}
+          <button
+            className={`${styles.burger} ${isMenuOpen ? styles.burgerActive : ''}`}
+            type="button"
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-expanded={isMenuOpen}
+            aria-controls="nav"
+          >
+            <span className={styles.burgerItem}></span>
+            <span className={styles.burgerText}>Меню</span>
+          </button>
         </div>
       </div>
     </header>

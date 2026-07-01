@@ -1,7 +1,7 @@
 .header {
   background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -13,37 +13,42 @@
   align-items: center;
 }
 
+/* Логотип */
 .headerLogo {
   display: flex;
   align-items: center;
   text-decoration: none;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .logoImage {
-  height: 50px;
+  height: 48px;
   width: auto;
 }
 
 .logoText {
   display: flex;
   flex-direction: column;
+  line-height: 1.2;
 }
 
 .logoText strong {
   font-size: 20px;
   color: #31344e;
   font-weight: 700;
-  line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
 .logoText span {
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #888;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 }
 
+/* Навигация */
 .nav {
   display: flex;
   gap: 30px;
@@ -53,32 +58,153 @@
 .navLink {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
   text-transform: lowercase;
+  position: relative;
+  padding: 4px 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 149, 0, 0.896);
+  transition: width 0.3s ease;
 }
 
 .navLink:hover {
-  color: #1a73e8;
+  color: #e8d71a;
 }
 
-.navLink.active {
-  color: #1a73e8;
+.navLink:hover::after {
+  width: 100%;
 }
 
-/* Адаптив */
+.navLinkActive {
+  color: #222e04;
+}
+
+.navLinkActive::after {
+  width: 100%;
+}
+
+/* Бургер-меню (десктоп — скрыто) */
+.burger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 4px;
+}
+
+.burgerItem {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #31344e;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burgerItem::before,
+.burgerItem::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #31344e;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burgerItem::before {
+  transform: translateY(-8px);
+}
+
+.burgerItem::after {
+  transform: translateY(6px);
+}
+
+.burgerActive .burgerItem {
+  background: transparent;
+}
+
+.burgerActive .burgerItem::before {
+  transform: rotate(45deg);
+}
+
+.burgerActive .burgerItem::after {
+  transform: rotate(-45deg);
+}
+
+.burgerText {
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Адаптив: планшеты и телефоны */
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
   .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
     gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-120%);
+    transition: transform 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 1px solid #eee;
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .navLink {
-    font-size: 14px;
+    font-size: 18px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLink::after {
+    display: none;
+  }
+
+  .navLink:hover {
+    background: #f5f5f5;
+    border-radius: 4px;
   }
 
   .logoText strong {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+  .logoText span {
+    font-size: 11px;
+    letter-spacing: 2px;
   }
 
   .logoImage {
@@ -86,20 +212,31 @@
   }
 }
 
-@media (max-width: 576px) {
-  .headerInner {
-    flex-wrap: wrap;
-    gap: 10px;
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 0;
+  }
+
+  .logoText strong {
+    font-size: 15px;
+  }
+
+  .logoText span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .logoImage {
+    height: 34px;
   }
 
   .nav {
-    width: 100%;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    padding: 15px;
+    gap: 10px;
   }
 
   .navLink {
-    font-size: 13px;
+    font-size: 16px;
+    padding: 6px 0;
   }
 }
