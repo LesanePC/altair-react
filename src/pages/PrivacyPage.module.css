@@ -1,0 +1,108 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #31344e 0%, #1a1a2e 100%);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.content {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #31344e;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
+.sectionTitle:first-of-type {
+  margin-top: 0;
+}
+
+.text {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.list {
+  padding-left: 24px;
+  margin-bottom: 16px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.list li {
+  margin-bottom: 4px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 40px 0;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+}

@@ -1,7 +1,114 @@
 .page {
-  padding: 20px;
+  min-height: 100vh;
+  background: #f5f6f8;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #31344e 0%, #1a1a2e 100%);
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.subtitle {
+  font-size: 17px;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Фильтр */
+.filterSection {
+  padding: 20px 0;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .filterBar {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filterSelect {
+  padding: 10px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  min-width: 200px;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #31344e;
+}
+
+.filterCount {
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+}
+
+.filterCount strong {
+  color: #31344e;
+}
+
+/* Список объектов */
+.objectsSection {
+  padding: 30px 0 60px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 35px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .filterSection {
+    padding: 14px 0;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterSelect {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .objectsSection {
+    padding: 20px 0 40px;
+  }
 }
