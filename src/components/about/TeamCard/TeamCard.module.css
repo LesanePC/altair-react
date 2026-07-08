@@ -1,0 +1,84 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.photoWrapper {
+  overflow: hidden;
+  padding-bottom: 75%;
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 20px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #31344e;
+  margin-bottom: 4px;
+}
+
+.position {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.experience {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.credentials {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+.credentials p {
+  margin: 2px 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phone,
+.email {
+  color: #31344e;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.phone:hover,
+.email:hover {
+  color: #1a73e8;
+}
