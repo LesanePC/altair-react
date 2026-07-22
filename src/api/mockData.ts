@@ -1,5 +1,25 @@
 import type { ObjectItem, ServiceItem, TeamMember, Review, WorkCategory } from '../types';
 
+// Objects
+import object2 from '../assets/img/objects/2.webp';
+import object3 from '../assets/img/objects/3.webp';
+import object4 from '../assets/img/objects/4.webp';
+import object5 from '../assets/img/objects/5.webp';
+import object6 from '../assets/img/objects/6.webp';
+
+// Team
+import team1 from '../assets/img/team/team1.webp';
+import team2 from '../assets/img/team/team2.webp';
+import team3 from '../assets/img/team/team3.webp';
+
+// Works
+import work1 from '../assets/img/works/1.webp';
+import work2 from '../assets/img/works/2.webp';
+import work3 from '../assets/img/works/3.webp';
+import work4 from '../assets/img/works/4.webp';
+import work5 from '../assets/img/works/5.webp';
+import work6 from '../assets/img/works/6.webp';
+
 export const mockObjects: ObjectItem[] = [
   {
     id: '1',
@@ -10,7 +30,7 @@ export const mockObjects: ObjectItem[] = [
     rooms: 3,
     floor: 5,
     description: 'Просторная квартира в историческом центре, рядом с метро.',
-    image: 'src/assets/img/objects/2.webp',
+    image: object2,
   },
   {
     id: '2',
@@ -20,7 +40,7 @@ export const mockObjects: ObjectItem[] = [
     area: 180,
     rooms: 5,
     description: 'Дом с большим участком в экологически чистом районе.',
-    image: 'src/assets/img/objects/3.webp',
+    image: object3,
   },
   {
     id: '3',
@@ -30,7 +50,7 @@ export const mockObjects: ObjectItem[] = [
     area: 120,
     rooms: 0,
     description: 'Помещение под магазин или офис на оживленной улице.',
-    image: 'src/assets/img/objects/4.webp',
+    image: object4,
   },
   {
     id: '4',
@@ -41,7 +61,7 @@ export const mockObjects: ObjectItem[] = [
     rooms: 1,
     floor: 3,
     description: 'Современная студия в новостройке, отделка под ключ.',
-    image: 'src/assets/img/objects/5.webp',
+    image: object5,
   },
   {
     id: '5',
@@ -51,7 +71,7 @@ export const mockObjects: ObjectItem[] = [
     area: 100,
     rooms: 4,
     description: 'Уютный дачный дом с баней и гаражом.',
-    image: 'src/assets/img/objects/6.webp',
+    image: object6,
   },
 ];
 
@@ -106,7 +126,7 @@ export const mockTeam: TeamMember[] = [
     name: 'Анна Иванова',
     position: 'Руководитель отдела продаж',
     experience: '12 лет',
-    photo: '/src/assets/img/team/team1.webp',
+    photo: team1,
     phone: '+7 (916) 123-45-67',
     email: 'a.ivanova@altair.ru',
     credentials: 'Аттестат № РОСС RU РГР ТОС 50 БН 687',
@@ -117,7 +137,7 @@ export const mockTeam: TeamMember[] = [
     name: 'Михаил Петров',
     position: 'Ведущий риелтор',
     experience: '8 лет',
-    photo: '/src/assets/img/team/team2.webp',
+    photo: team2,
     phone: '+7 (916) 987-65-43',
     email: 'm.petrov@altair.ru',
     credentials: 'Аттестат № РОСС RU РГР ТОС 50 БН 688',
@@ -128,7 +148,7 @@ export const mockTeam: TeamMember[] = [
     name: 'Елена Соколова',
     position: 'Юрист по недвижимости',
     experience: '10 лет',
-    photo: '/src/assets/img/team/team3.webp',
+    photo: team3,
     phone: '+7 (916) 555-44-33',
     email: 'e.sokolova@altair.ru',
     credentials: 'Аттестат № РОСС RU РГР ТОС 50 БН 689',
@@ -140,28 +160,28 @@ export const workCategories: WorkCategory[] = [
   {
     id: 'buy',
     title: 'Купить',
-    image: '/src/assets/img/works/3.webp',
+    image: work3,
     link: '/objects?category=buy',
     items: ['Квартиры-студии', '1-4 комнатные квартиры', 'Доля в квартире', 'Комнаты'],
   },
   {
     id: 'rent-sell',
     title: 'Снять / Продать',
-    image: '/src/assets/img/works/2.webp',
+    image: work2,
     link: '/objects?category=rent-sell',
     items: ['Квартиры-студии', '1-4 комнатные квартиры', 'Комнаты'],
   },
   {
     id: 'commercial',
     title: 'Коммерческая недвижимость',
-    image: '/src/assets/img/works/5.webp',
+    image: work5,
     link: '/objects?category=commercial',
     items: ['Гаражи', 'Производственные помещения', 'Торговые помещения'],
   },
   {
     id: 'rent',
     title: 'Аренда',
-    image: '/src/assets/img/works/1.webp',
+    image: work1,
     link: '/objects?category=rent',
     items: [
       'Офисы',
@@ -173,14 +193,14 @@ export const workCategories: WorkCategory[] = [
   {
     id: 'houses',
     title: 'Дома и участки',
-    image: '/src/assets/img/works/6.webp',
+    image: work6,
     link: '/objects?category=houses',
     items: ['Дома и коттеджи', 'Дачи', 'Участки ИЖС, СНТ, ДНП'],
   },
   {
     id: 'legal',
     title: 'Юридические услуги',
-    image: '/src/assets/img/works/4.webp',
+    image: work4,
     link: '/services#legal',
     items: ['Приватизация жилья', 'Сопровождение сделок', 'Составление договоров'],
   },
@@ -193,7 +213,7 @@ export const mockReviews: Review[] = [
     text: 'Отличное агентство! Помогли найти квартиру за 2 дня. Профессиональный подход и внимательное отношение к клиенту.',
     rating: 5,
     date: '2025-03-15',
-    photo: '/src/assets/img/Feedback/avatar1.webp',
+    photo: '',
   },
   {
     id: 'r2',
@@ -201,7 +221,7 @@ export const mockReviews: Review[] = [
     text: 'Заказывал оценку недвижимости. Всё быстро, чётко, без лишней бюрократии. Рекомендую!',
     rating: 5,
     date: '2025-03-10',
-    photo: '/src/assets/img/Feedback/avatar2.webp',
+    photo: '',
   },
   {
     id: 'r3',
@@ -209,7 +229,7 @@ export const mockReviews: Review[] = [
     text: 'Продали мою квартиру за 2 недели. Отличная работа команды!',
     rating: 4,
     date: '2025-03-01',
-    photo: '/src/assets/img/Feedback/avatar3.webp',
+    photo: '',
   },
   {
     id: 'r4',
@@ -217,6 +237,6 @@ export const mockReviews: Review[] = [
     text: 'Благодарю за помощь в подборе коммерческой недвижимости. Нашли идеальный вариант.',
     rating: 5,
     date: '2025-02-20',
-    photo: '/src/assets/img/Feedback/avatar4.webp',
+    photo: '',
   },
 ];
